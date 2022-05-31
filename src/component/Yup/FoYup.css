@@ -1,0 +1,52 @@
+* {
+    font-family: Lato;
+  }
+  
+  .root {
+    padding: 0px 10px;
+    display: grid;
+  }
+  
+  @media screen and (min-width: 800px) {
+    .root {
+      grid-template-columns: 50% 50%;
+    }
+  }
+  .login-form {
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 520px;
+  }
+  .form-group {
+    display: grid;
+    grid-template-columns: 30% 50%;
+    margin: 10px 0px;
+	text-align: left;
+  }
+  
+  input,
+  select,
+  textarea {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 100%;
+  }
+  
+  button {
+    margin-right: 5px;
+    padding: 10px;
+    border: none;
+  }
+  .btn-primary {
+    background: blue;
+    color:white;
+  }
+  .text-error {
+    color: red;
+    text-align: left;
+  }
+  

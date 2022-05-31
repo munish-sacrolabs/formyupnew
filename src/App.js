@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Router, Switch, Route, Link } from "react-router-dom";
+import FoYup from "./component/Yup/FoYup";
+import LoginFrom from "./component/LoginFrom/LoginFrom";
+import FinalForm from "./component/FinalForm";
+import reactRouterDom from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div >
+      <div>
+        <Link to="/LoginFrom">
+          <div className="linkButton">
+            <button type="submit" className="linkBtn">
+              Login Form
+            </button>
+          </div>
+        </Link>
+      </div>
+      <div>
+        <Link to="/FoYup">
+          <div className="linkButton">
+            <button type="submit" className="linkBtn">
+              Formik Form
+            </button>
+          </div>
+        </Link>
+      </div>
+      <div>
+        <Link to="/FinalForm">
+          <div className="linkButton">
+            <button type="submit" className="linkBtn">
+              Final Form
+            </button>
+          </div>
+        </Link>
+      </div>
+      <br />
+      <br />
+      <br />
+      <Switch>
+        <Route path="/LoginFrom" component={LoginFrom} />
+        <Route path="/FoYup" component={FoYup} />
+        <Route path="/FinalForm" component={FinalForm} />
+      </Switch>
     </div>
   );
 }
