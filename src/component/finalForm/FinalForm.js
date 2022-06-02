@@ -15,16 +15,16 @@ const FinalForm = () => {
 
   const validate = (e) => {
     const errors = {};
-    if (e.firstname && e.firstname.length < 5)
+    if (e.firstname && e.firstname.length < 3)
       errors.firstname = <p className="error">Too Small</p>;
 
-    if (e.lastname && e.lastname.length < 5)
+    if (e.lastname && e.lastname.length < 3)
       errors.lastname = <p className="error">Too Small</p>;
 
-    if (e.organisation && e.organisation.length < 5)
+    if (e.organisation && e.organisation.length < 3)
       errors.organisation = <p className="error">Too Small</p>;
 
-    if (e.phone && e.phone.length < 5)
+    if (e.phone && e.phone.length < 10)
       errors.phone = <p className="error">Too Small</p>;
 
     if (!e.firstname) {
@@ -54,7 +54,7 @@ const FinalForm = () => {
       validate={validate}
       render={({ handleSubmit }) => (
         <form onSubmit={handleSubmit} className="login-form">
-            <center><h2>Final Form</h2></center>
+            <center><h1>Final Form</h1></center>
           <Field name="firstname">
             {({ input, meta }) => (
               <div>
@@ -73,15 +73,6 @@ const FinalForm = () => {
               </div>
             )}
           </Field>
-          <Field name="email">
-            {({ input, meta }) => (
-              <div>
-                <label>Email</label>
-                <input type="text" {...input} placeholder="Email" />
-                {meta.touched && meta.error && <span>{meta.error}</span>}
-              </div>
-            )}
-          </Field>
           <Field name="organisation">
             {({ input, meta }) => (
               <div>
@@ -91,6 +82,16 @@ const FinalForm = () => {
               </div>
             )}
           </Field>
+          <Field name="email">
+            {({ input, meta }) => (
+              <div>
+                <label>Email</label>
+                <input type="text" {...input} placeholder="Email" />
+                {meta.touched && meta.error && <span>{meta.error}</span>}
+              </div>
+            )}
+          </Field>
+         
           <Field name="phone">
             {({ input, meta }) => (
               <div>

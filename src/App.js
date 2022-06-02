@@ -1,14 +1,16 @@
 import "./App.css";
 import { Router, Switch, Route, Link } from "react-router-dom";
-import FoYup from "./component/Yup/FoYup";
+
 import LoginFrom from "./component/LoginFrom/LoginFrom";
-import FinalForm from "./component/FinalForm";
+import FormYup from "./component/formikform/FormYup";
+import FinalForm from "./component/finalForm/FinalForm";
 import reactRouterDom from "react-router-dom";
 
 function App() {
   return (
-    
-    <div >
+    <div class="sidebar">
+      <br/>
+    <div class="center break-column">
       <div>
         <Link to="/LoginFrom">
           <div className="linkButton">
@@ -19,7 +21,7 @@ function App() {
         </Link>
       </div>
       <div>
-        <Link to="/FoYup">
+        <Link to="/FormYup">
           <div className="linkButton">
             <button type="submit" className="linkBtn">
               Formik Form
@@ -36,12 +38,12 @@ function App() {
           </div>
         </Link>
       </div>
-      <br />
-      <br />
-      <br />
-      <Switch>
+     
+      
+    </div>
+    <Switch>
         <Route path="/LoginFrom" component={LoginFrom} />
-        <Route path="/FoYup" component={FoYup} />
+        <Route path="/FormYup" component={FormYup} />
         <Route path="/FinalForm" component={FinalForm} />
       </Switch>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFormik } from 'formik';
-import './FoYup.css';
+import './FormYup.css';
 import * as yup from 'yup';
 
 const validationSchema = yup.object().shape({
@@ -23,7 +23,7 @@ const validationSchema = yup.object().shape({
       .min(5, 'Minimum 5 characters required'),
   });
 
-const FoYup = () =>  {
+const FormYup = () =>  {
     const formik = useFormik({  
         initialValues: {  
           firstName: '',  
@@ -50,46 +50,46 @@ const FoYup = () =>  {
         );  
       };     
   return (
-    <div className="root">  
-    <div className="form login-form">  
-      <h1> Formik with Yup </h1>  
+     
+    <div className="login-form">  
+      
       <form onSubmit={formik.handleSubmit}>  
+      <center><h1> Formik with Yup </h1>  </center>
         <div className="form-group">  
           <label> First Name </label>  
-          <div>  
+           <br/>
             <input type="text" {...formik.getFieldProps('firstName')} />  
-            {renderErrorMessage('firstName')}  
-          </div>  
+                   
         </div>  
+        {renderErrorMessage('firstName')}
         <div className="form-group">  
           <label> Last Name </label>  
-          <div>  
+          <br/>
             <input type="text" {...formik.getFieldProps('lastName')} />  
-            {renderErrorMessage('lastName')}  
-          </div>  
-        </div> 
+            
+             </div> 
+        {renderErrorMessage('lastName')}  
         <div className="form-group">  
           <label> Organisation </label>  
-          <div>  
-            <input type="text" {...formik.getFieldProps('organisation')} />  
-            {renderErrorMessage('organisation')}  
-          </div>  
+          <br/>
+             <input type="text" {...formik.getFieldProps('organisation')} />  
+          
         </div> 
+        {renderErrorMessage('organisation')} 
         <div className="form-group">  
           <label> Email Id </label>  
-          <div>  
+         <br/>
             <input type="text" {...formik.getFieldProps('emailId')} />  
-            {renderErrorMessage('emailId')}  
-          </div>  
+              
         </div>  
+        {renderErrorMessage('emailId')}  
         <div className="form-group">  
           <label> Mobile Number </label>  
-          <div>
+          <br/>
           <input type="number" {...formik.getFieldProps('mobileNumber')} /> 
-          {renderErrorMessage('mobileNumber')} 
-        </div>  
+                  
         </div>
-       
+        {renderErrorMessage('mobileNumber')} 
         
         <div>  
           <button type="submit" className="btn-primary">  
@@ -99,8 +99,7 @@ const FoYup = () =>  {
         </div>  
       </form>  
     </div>  
-   
-  </div>
+
   )
 }
-export default FoYup;
+export default FormYup;
