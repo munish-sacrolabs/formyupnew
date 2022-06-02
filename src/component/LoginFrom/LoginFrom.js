@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import './FinalForm.css';
+import './LoginFrom.css';
 const LoginFrom = () => {
   const {
     register,
@@ -116,7 +116,7 @@ const LoginFrom = () => {
             )}
           </div>
 
-          <button type="submit">Submit</button>
+          <center><button type="submit">Submit</button></center>
         </div>
       </form>
     </div>

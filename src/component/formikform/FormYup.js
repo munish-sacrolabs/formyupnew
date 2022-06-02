@@ -92,9 +92,7 @@ const FormYup = () =>  {
         {renderErrorMessage('mobileNumber')} 
         
         <div>  
-          <button type="submit" className="btn-primary">  
-            Submit  
-          </button>  
+         <center> <button type="submit" className="btn-primary"> Submit </button>  </center>
            
         </div>  
       </form>  
