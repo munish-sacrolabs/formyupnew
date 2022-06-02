@@ -25,24 +25,24 @@ const FinalForm = () => {
       errors.organisation = <p className="error">Too Small</p>;
 
     if (e.phone && e.phone.length < 10)
-      errors.phone = <p className="error">Too Small</p>;
+      errors.phone = <p className="error">enter valid Format</p>;
 
     if (!e.firstname) {
-      errors.firstname = <p className="error">Required</p>;
+      errors.firstname = <p className="error">First Name Required</p>;
     }
     if (!e.lastname) {
-      errors.lastname = <p className="error">Required</p>;
+      errors.lastname = <p className="error">Last Name Required</p>;
     }
     if (!e.email) {
-      errors.email = <p className="error">Required</p>;
+      errors.email = <p className="error">Email Required</p>;
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(e.email)) {
       errors.email = "Invalid email address";
     }
     if (!e.organisation) {
-      errors.organisation = <p className="error">Required</p>;
+      errors.organisation = <p className="error">Organisation Required</p>;
     }
     if (!e.phone) {
-      errors.phone = <p className="error">Required</p>;
+      errors.phone = <p className="error">Phone Required</p>;
     }
 
     return errors;
@@ -58,8 +58,8 @@ const FinalForm = () => {
           <Field name="firstname">
             {({ input, meta }) => (
               <div>
-                <label>Firstname</label>
-                <input type="text" {...input} placeholder="firstname" />
+                <label>First name</label>
+                <input type="text" {...input} placeholder="First Name" />
                 {meta.touched && meta.error && <span>{meta.error}</span>}
               </div>
             )}
@@ -67,8 +67,8 @@ const FinalForm = () => {
           <Field name="lastname">
             {({ input, meta }) => (
               <div>
-                <label>Lastname</label>
-                <input type="text" {...input} placeholder="lastname" />
+                <label>Last Name</label>
+                <input type="text" {...input} placeholder="Last Name" />
                 {meta.touched && meta.error && <span>{meta.error}</span>}
               </div>
             )}
@@ -76,8 +76,8 @@ const FinalForm = () => {
           <Field name="organisation">
             {({ input, meta }) => (
               <div>
-                <label>organisation</label>
-                <input type="text" {...input} placeholder="organisation" />
+                <label>Organisation Name</label>
+                <input type="text" {...input} placeholder="Organisation" />
                 {meta.touched && meta.error && <span>{meta.error}</span>}
               </div>
             )}
@@ -95,8 +95,8 @@ const FinalForm = () => {
           <Field name="phone">
             {({ input, meta }) => (
               <div>
-                <label>Phone</label>
-                <input type="text" {...input} placeholder="Phone" />
+                <label>Phone Number</label>
+                <input type="text" {...input} placeholder="Phone Number" maxLength="10" />
                 {meta.touched && meta.error && <span>{meta.error}</span>}
               </div>
             )}

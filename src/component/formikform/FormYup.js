@@ -6,20 +6,20 @@ import * as yup from 'yup';
 const validationSchema = yup.object().shape({
     firstName: yup
       .string()
-      .required('First name is required.')
+      .required('First Name is required.')
       .min(5, 'Minimum 5 characters required'),
     lastName: yup.string()
-    .required('Last name is required')
+    .required('Last Name is required')
     .min(5, 'Minimum 5 characters required'),
     emailId: yup
       .string()
       .required('Email ID is required')
       .email('Enter valid email id'),
       organisation: yup.string()
-      .required('organisation is required')
+      .required('Organisation is required')
       .min(5, 'Minimum 5 characters required'),
       mobileNumber: yup.number()
-      .required('mobileNumber is required')
+      .required('MobileNumber is required')
       .min(5, 'Minimum 5 characters required'),
   });
 
@@ -58,35 +58,35 @@ const FormYup = () =>  {
         <div className="form-group">  
           <label> First Name </label>  
            <br/>
-            <input type="text" {...formik.getFieldProps('firstName')} />  
-                   
+            <input type="text"  placeholder="First Name" {...formik.getFieldProps('firstName')} />  
+                    
         </div>  
         {renderErrorMessage('firstName')}
         <div className="form-group">  
           <label> Last Name </label>  
           <br/>
-            <input type="text" {...formik.getFieldProps('lastName')} />  
+            <input type="text"  placeholder="Last Name"{...formik.getFieldProps('lastName')} />  
             
              </div> 
         {renderErrorMessage('lastName')}  
         <div className="form-group">  
           <label> Organisation </label>  
           <br/>
-             <input type="text" {...formik.getFieldProps('organisation')} />  
+             <input type="text" placeholder=" Organisation" {...formik.getFieldProps('organisation')} />  
           
         </div> 
         {renderErrorMessage('organisation')} 
         <div className="form-group">  
           <label> Email Id </label>  
          <br/>
-            <input type="text" {...formik.getFieldProps('emailId')} />  
+            <input type="text"  placeholder="Email id"{...formik.getFieldProps('emailId')} />  
               
         </div>  
         {renderErrorMessage('emailId')}  
         <div className="form-group">  
           <label> Mobile Number </label>  
           <br/>
-          <input type="number" {...formik.getFieldProps('mobileNumber')} /> 
+          <input type="number" placeholder='Mobile Number' {...formik.getFieldProps('mobileNumber')} /> 
                   
         </div>
         {renderErrorMessage('mobileNumber')} 

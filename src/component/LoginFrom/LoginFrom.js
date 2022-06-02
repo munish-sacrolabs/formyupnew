@@ -27,7 +27,7 @@ const LoginFrom = () => {
             <label htmlFor="firstName">First Name</label>
             <input
               type="text"
-              placeholder="firstname"
+              placeholder="First Name"
               className={`${errors.firstName && "invalid"}`}
               {...register("firstName", { required: "Required" })}
               onKeyUp={() => {
@@ -43,7 +43,7 @@ const LoginFrom = () => {
             <label htmlFor="firstName">Last Name</label>
             <input
               type="text"
-              placeholder="lastname"
+              placeholder="Last Name"
               className={`${errors.lastName && "invalid"}`}
               {...register("lastName", { required: "Required" })}
               onKeyUp={() => {
@@ -75,7 +75,7 @@ const LoginFrom = () => {
             <label htmlFor="organisationName">Email:</label>
             <input
               type="text"
-              placeholder="Enter the email"
+              placeholder="Enter the Email"
               className={`form-control ${errors.email && "invalid"}`}
               {...register("email", {
                 required: "Email is Required",
@@ -94,10 +94,10 @@ const LoginFrom = () => {
           </div>
 
           <div className="form-control">
-            <label htmlFor="firstName">Phoneno</label>
+            <label htmlFor="phoneNumber">Phone Number</label>
             <input
               type="text"
-              placeholder="Phoneno"
+              placeholder="Phone Number"
               className={`form-control ${errors.phone && "invalid"}`}
               {...register("phoneNumber", {
                 required: "Required",
